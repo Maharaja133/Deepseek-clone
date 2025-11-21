@@ -22,7 +22,7 @@ const Sidebar = ({expand, setExpand}) => {
                     <Image className="md:hidden" src={assets.menu_icon} alt='' />
                     <Image className="hidden md:block w-7" src={expand ? assets.sidebar_close_icon : assets.sidebar_icon} alt='' />
                     <div className={`absolute w-max ${expand?"left-1/2 -translate-x-1/2 top-12":"-top-12 left-0"} opacity-0 group-hover:opacity-100 transition bg-black text-white text-sm px-3 py-2 rounded-lg shadow-lg pointer-events-none`}>
-                        {expand?'Closed sidebar':'Open sidebar'}
+                        {expand?'Close sidebar':'Open sidebar'}
                         <div className={`w-3 h-3 absolute bg-black rotate-45 ${expand?"left-1/2 -top-1.5 -translate-x-1/2":"left-4 -bottom-1.5"}`}>
 
                         </div>
