@@ -59,9 +59,9 @@ export default function Home() {
                 ))}
                 {
                   isLoading && (
-                    <div className="max-w-3xl gap-4 flex items-start py-3">
+                    <div className="w-full max-w-3xl gap-4 flex items-center py-3"> {/* Added w-full and changed to items-center */}
                       <Image src={assets.logo_icon} alt="Logo" className="h-9 w-9 p-1 border border-white/15 rounded-full"></Image>
-                      <div className="loader flex justify-center items-center gap-1">
+                      <div className="loader flex justify-start items-center gap-1"> {/* Changed to justify-start */}
                         <div className="w-1 h-1 rounded-full bg-white animate-bounce"></div>
                         <div className="w-1 h-1 rounded-full bg-white animate-bounce"></div>
                         <div className="w-1 h-1 rounded-full bg-white animate-bounce"></div>

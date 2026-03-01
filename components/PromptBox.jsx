@@ -84,8 +84,8 @@ const PromptBox = ({setIsLoading,isLoading}) => {
                         });
                     },i*100);
                 }
-            }else{
-                toast.error(data.message);
+            } else {
+                toast.error(data.error || data.message || "An unknown error occurred");
                 setPrompt(promptCopy);
             }
         }catch(error){
@@ -123,7 +123,7 @@ const PromptBox = ({setIsLoading,isLoading}) => {
             <div className='flex items-center gap-2'>
                 <Image className='w-4 cursor-pointer' src={assets.pin_icon} alt='' />
                 <button className={`${prompt?'bg-primary':'bg-[#71717a]'} rounded-full p-2 cursor-pointer`}>
-                    <Image className='w-3.5 aspect-square' src={prompt?assets.arrow_icon:assets.arrow_icon_dull} alt='' />
+                    <Image className='w-3.5 h-auto aspect-square' src={prompt?assets.arrow_icon:assets.arrow_icon_dull} alt='' />
                 </button>
             </div>
         </div>
